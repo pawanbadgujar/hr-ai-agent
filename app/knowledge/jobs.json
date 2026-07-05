@@ -1,0 +1,10 @@
+{
+  "job_creation": {
+    "steps": [
+      "Submit Job Request",
+      "HR Approval",
+      "Publish Job",
+      "Screen Candidates"
+    ]
+  }
+}

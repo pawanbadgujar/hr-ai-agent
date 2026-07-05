@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from app.routers.leave import router as leave_router
 
 app = FastAPI(
     title="HR AI Agent",
@@ -6,6 +7,7 @@ app = FastAPI(
     version="1.0.0"
 )
 
+app.include_router(leave_router)
 
 @app.get("/")
 def root():
