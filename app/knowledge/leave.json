@@ -1,0 +1,23 @@
+{
+  "leave_process": {
+    "steps": [
+      "Login to HR Portal",
+      "Navigate to Leave Section",
+      "Select Leave Type",
+      "Choose Dates",
+      "Submit Request"
+    ]
+  },
+
+  "leave_types": [
+    "Casual Leave",
+    "Sick Leave",
+    "Earned Leave"
+  ],
+
+  "policy": {
+    "casual_leave": 6,
+    "sick_leave": 8,
+    "earned_leave": 10
+  }
+}
