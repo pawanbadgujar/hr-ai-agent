@@ -7,6 +7,7 @@ class Settings(BaseSettings):
 
     OPENAI_API_KEY: str = ""
     OPENROUTER_API_KEY: str = ""
+    GOOGLE_API_KEY: str = ""
 
     class Config:
         env_file = ".env"
