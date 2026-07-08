@@ -75,11 +75,11 @@ Clone repository
 ## Screenshots
 ### Chatbot UI
 
-![Chatbot](screenshots/chatbot.png)
+![Chatbot](screenshorts/chatbot.png)
 
 ### API Documentation
 
-![Swagger](screenshots/swagger.png)
+![Swagger](screenshorts/swagger.png)
 
 AI Usage
 
