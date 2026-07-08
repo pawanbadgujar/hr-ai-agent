@@ -6,5 +6,16 @@
       "Publish Job",
       "Screen Candidates"
     ]
+  },
+  "job_requirements": {
+    "requirements": [
+      "Job Title",
+      "Department",
+      "Required Skills",
+      "Experience",
+      "Education Qualification",
+      "Location",
+      "Salary Range"
+    ]
   }
 }

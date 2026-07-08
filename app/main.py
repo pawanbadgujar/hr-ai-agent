@@ -5,6 +5,10 @@ from app.routers import payroll
 from app.routers import workforce
 from app.routers import chatbot
 
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
+
+
 
 app = FastAPI(
     title="HR AI Agent",
@@ -12,19 +16,24 @@ app = FastAPI(
     version="1.0.0"
 )
 
+app.mount("/frontend", StaticFiles(directory="frontend"), name="frontend")
+
 app.include_router(leave_router)
 app.include_router(jobs.router)
 app.include_router(payroll.router)
 app.include_router(workforce.router)
 app.include_router(chatbot.router)
 
-@app.get("/")
-def root():
-    return {
-        "status": "success",
-        "message": "🚀 HR AI Agent is running successfully!"
-    }
+# @app.get("/")
+# def root():
+#     return {
+#         "status": "success",
+#         "message": "🚀 HR AI Agent is running successfully!"
+#     }
 
+@app.get("/", include_in_schema=False)
+def home():
+    return FileResponse("frontend/index.html")
 
 @app.get("/health")
 def health():

@@ -1,0 +1,201 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+}
+
+body{
+
+    background:#f4f6f9;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    height:100vh;
+}
+
+.container{
+
+    width:100%;
+    max-width:850px;
+}
+
+.chat-card{
+
+    background:white;
+
+    border-radius:12px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    overflow:hidden;
+}
+
+.header{
+
+    background:#1f4e79;
+
+    color:white;
+
+    padding:22px;
+
+    text-align:center;
+}
+
+.header h2{
+
+    font-size:28px;
+
+    margin-bottom:6px;
+}
+
+.header p{
+
+    opacity:.9;
+}
+
+.chat-box{
+
+    height:500px;
+
+    overflow-y:auto;
+
+    background:#fafafa;
+
+    padding:25px;
+}
+
+.message{
+
+    max-width:75%;
+
+    padding:14px 18px;
+
+    border-radius:10px;
+
+    margin-bottom:18px;
+
+    line-height:1.6;
+}
+
+.bot{
+
+    background:#ffffff;
+
+    border:1px solid #dcdcdc;
+
+    color:#333;
+}
+
+.user{
+
+    margin-left:auto;
+
+    background:#1f4e79;
+
+    color:white;
+}
+
+.loading{
+
+    font-style:italic;
+
+    color:#666;
+}
+
+.input-area{
+
+    display:flex;
+
+    gap:10px;
+
+    padding:18px;
+
+    border-top:1px solid #eee;
+
+    background:white;
+}
+
+.input-area input{
+
+    flex:1;
+
+    padding:14px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    font-size:15px;
+}
+
+.input-area input:focus{
+
+    outline:none;
+
+    border-color:#1f4e79;
+}
+
+.input-area button{
+
+    width:120px;
+
+    background:#1f4e79;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.3s;
+}
+
+.input-area button:hover{
+
+    background:#173a5c;
+}
+
+ul{
+
+    margin-top:10px;
+
+    padding-left:20px;
+}
+
+@media(max-width:768px){
+
+.chat-card{
+
+    height:100vh;
+
+    border-radius:0;
+}
+
+.chat-box{
+
+    height:calc(100vh - 180px);
+}
+
+.message{
+
+    max-width:90%;
+}
+
+.input-area{
+
+    flex-direction:column;
+}
+
+.input-area button{
+
+    width:100%;
+}
+
+}
