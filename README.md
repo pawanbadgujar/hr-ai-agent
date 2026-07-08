@@ -106,3 +106,98 @@ Employee database
 Leave application workflow
 Notifications
 Admin dashboard
+
+
+# Tech Stack
+
+
+## Backend
+
+- Python
+- FastAPI
+- Pydantic
+- REST APIs
+
+
+## AI
+
+- Google Gemini API
+- Prompt Engineering
+- Intent Detection
+
+
+## Frontend
+
+- HTML
+- CSS
+- JavaScript
+
+
+## Data
+
+- JSON based knowledge repository
+
+
+
+---
+
+# Architecture
+
+
+User
+
+↓
+
+Frontend Chat UI
+
+↓
+
+FastAPI Backend
+
+↓
+
+Intent Detection
+
+↓
+
+Knowledge Base Retrieval
+
+↓
+
+Gemini AI
+
+↓
+
+Response
+
+
+
+---
+
+# AI Usage
+
+
+AI was used in the project for:
+
+1. Response generation using Google Gemini API
+
+2. Prompt engineering to control AI responses
+
+3. Intent classification for HR queries
+
+4. Designing chatbot workflow
+
+5. Debugging and improving application structure using ChatGPT
+
+
+
+---
+
+# Assumptions
+
+
+- HR policies are stored in structured JSON files.
+- Employee specific data is not connected with database.
+- Authentication is outside the project scope.
+- Knowledge base can be extended with additional HR documents.
+- Gemini responses are restricted using provided HR context.
