@@ -1,10 +1,7 @@
 from fastapi import APIRouter
 from app.services.job_service import JobService
 
-router = APIRouter(
-    prefix="/jobs",
-    tags=["Jobs"]
-)
+router = APIRouter(prefix="/jobs", tags=["Jobs"])
 
 
 @router.get("/creation")

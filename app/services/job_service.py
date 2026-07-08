@@ -6,15 +6,9 @@ class JobService:
     @staticmethod
     def get_job_creation_process():
         data = KnowledgeService.load_json("jobs.json")
-        return {
-            "topic": "Job Creation",
-            "content": data["job_creation_process"]
-        }
+        return data["job_creation"]
 
     @staticmethod
     def get_job_requirements():
         data = KnowledgeService.load_json("jobs.json")
-        return {
-            "topic": "Job Requirements",
-            "content": data["requirements"]
-        }
+        return data["job_requirements"]

@@ -1,3 +1,5 @@
+from rapidfuzz import fuzz
+
 class IntentDetector:
     """
     Detects the user's intent based on keywords.
@@ -40,17 +42,49 @@ class IntentDetector:
         ]
     }
 
-    @classmethod
-    def detect(cls, message: str) -> str:
-        """
-        Returns the detected intent.
-        """
+    @staticmethod
+    def detect(query):
 
-        message = message.lower()
+        text=query.lower()
 
-        for intent, keywords in cls.INTENTS.items():
-            for keyword in keywords:
-                if keyword in message:
-                    return intent
+
+        keywords={
+
+            "leave":[
+                "leave",
+                "vacation",
+                "holiday",
+                "apply leave"
+            ],
+
+            "payroll":[
+                "salary",
+                "payroll",
+                "payslip"
+            ],
+
+            "jobs":[
+                "job",
+                "hiring",
+                "requirement"
+            ],
+
+            "workforce":[
+                "employee",
+                "workforce"
+            ]
+
+        }
+
+
+        for module,words in keywords.items():
+
+            for word in words:
+
+                score=fuzz.partial_ratio(text,word)
+
+                if score > 70:
+                    return module
+
 
         return "unknown"

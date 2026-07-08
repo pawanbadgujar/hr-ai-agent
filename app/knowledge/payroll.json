@@ -1,7 +1,7 @@
 {
-  "salary_credit_date": "Last working day of every month",
-
-  "tax": "TDS is deducted as per government rules.",
-
-  "payslip": "Payslips are available in the HR portal."
+  "payroll_basics": {
+    "salary_credit_date": "Last working day of every month",
+    "tax": "TDS is deducted as per government rules.",
+    "payslip": "Payslips are available in the HR portal."
+  }
 }

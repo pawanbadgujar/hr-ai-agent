@@ -5,7 +5,7 @@ from app.ai.prompts import SYSTEM_PROMPT
 from app.ai.router import detect_module
 from app.core.config import settings
 from app.services.knowledge_service import KnowledgeService
-
+from app.ai.guard import Guard
 
 # Configure Gemini
 genai.configure(api_key=settings.GOOGLE_API_KEY)
@@ -19,7 +19,13 @@ class AIService:
     @staticmethod
     def ask(query: str):
 
-        # Detect which HR module the question belongs to
+        guard = Guard.check(query)
+
+
+        if guard["type"] != "continue":
+
+            return guard["response"]
+
         module = detect_module(query)
 
         knowledge = {}
